@@ -1,1 +1,2 @@
-# -ng-k-m-n-h-c-ptit
+# Đăng ký môn học -Spring
+# làm nhóm
