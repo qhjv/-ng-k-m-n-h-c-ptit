@@ -1,0 +1,32 @@
+body {
+	margin: 0%;
+	padding: 0 0 50px 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3)
+		0px 1px 3px -1px;
+	padding: 50px 30px !important;
+}
+
+section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-size: 0.8rem;
+}
+
+section .btn {
+	font-size: 0.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding-bottom: .75rem;
+}
+
+table th {
+	text-align: center;
+}
+main.container {
+    margin-top: 100px;
+}

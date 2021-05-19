@@ -1,0 +1,9 @@
+/*-------------
+    Mobile     
+--------------*/
+
+@media (max-width:739px){
+	nav.navbar.navbar-expand-md li{
+		margin-left:0!important
+	}
+}

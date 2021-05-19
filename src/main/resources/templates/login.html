@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="../css/login.css">
+<title>Đăng nhập QLSV</title>
+</head>
+
+<body>
+	<main>
+		<div class="wrapper fadeInDown">
+			<div id="formContent">
+				<!-- Tabs Titles -->
+
+				<!-- Icon -->
+				<div>
+					<h3 style="color: royalblue; padding-bottom: 20px;">
+						<b>Đăng nhập</b>
+					</h3>
+				</div>
+
+				<!-- Login Form -->
+				<form method="post" th:object=${accountForm} th:action="@{/login}">
+				<div class="">
+					<label class="login-label">Tên đăng nhập:</label>
+					<input type="text" id="username" class="fadeIn second"
+						name="username" placeholder="Tên đăng nhập" />
+				</div>
+				<div class="">
+						<label class="login-label">Mật khẩu:</label>
+						 <input
+						type="password" id="password" class="fadeIn third" name="password"
+						placeholder="Mật khẩu" /> 
+						</div>
+						<input  type="submit"
+						class="fadeIn fourth dangnhap" value="Đăng nhập" />
+				</form>
+			</div>
+			<div th:if="${errorAccountMessage}" th:utext="${errorAccountMessage}"
+				style="color: red; font-style: italic;"></div>
+		</div>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

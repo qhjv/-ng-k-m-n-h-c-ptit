@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+	integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+	crossorigin="anonymous" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link
+	href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css"
+	rel="stylesheet" />
+<link rel="stylesheet" href="../css/schedule.css">
+<link rel="stylesheet" href="../css/repon.css">
+<title>PTIT</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+		<a class="navbar-brand" href="/home"> <img
+			src="data:image/png;base64,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"
+			alt="logo ptit" width="30" height="35"
+			class="d-inline-block align-top"> <span class="mb-0">Quản
+				lí đào tạo PTIT</span></a>
+				<li style="color:white;margin-left:200px;list-style: none;"><a a style="color:white" th:href="@{/registersub}" class="w-50">
+					<b>Đăng ký môn học</b>
+				</a></li>
+				<li style="color:white;margin-left:100px;list-style: none;"><a style="color:white" th:href="@{/schedule}" class="w-50">
+					<b>Xem thời khóa biểu</b>
+				</a></li>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+			</ul>
+			<form class="form-inline mt-2 mt-md-0">
+				<p class="mb-0 text-white">
+					Xin chào, <span th:text="${nameuser}"></span> <a style="color: black;" href="/login"><button type="button" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"></path>
+  <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"></path>
+</svg>
+                Đăng xuất
+              </button>
+					</a>
+				</p>
+			</form>
+		</div>
+	</nav>
+	<main class="container">
+		<div class="pb-5">
+			<h3 style="color: royalblue;" class="text-center">
+				<b>Xem thời khóa biểu</b>
+			</h3>
+		</div>
+		<form method="POST" th:action="@{/schedule}"
+			th:object="${calenderForm}">
+			<section id="select_panel">
+				<h6>
+					<b>Tuần đang xem: <span style="color: blue"
+						th:utext="${weeknow}"></span>
+					</b>
+				</h6>
+				<select id="select_subject" style="width: 50%" name="calender">
+					<option th:text="---"></option>
+					<div th:each="w:${toweek}">
+						<option th:text="${w}" th:value="${w}"></option>
+					</div>
+					<input  type="submit" value="Lọc" style="padding: 14px!important;cursor:pointer;">
+			</section>
+		</form>
+		<hr>
+		<section id="schedule_class">
+			<h6 class="text-center">
+				<b
+					th:utext="${checkcalender}>0 ? 'Danh sách kíp học trong tuần:' : 'Không có kíp học trong tuần'"></b>
+			</h6>
+			<div th:each="s:${userschedule}">
+				<article class="item row">
+					<div class="col-2 item_timestamp_container">
+						<div class="item_timestamp">
+							<p class="mb-0 text-white">
+								<span th:utext="${s.shift}>2 ? ${s.shift}*2+6 : ${s.shift}*2+5"></span>:00
+							</p>
+						</div>
+					</div>
+					<div class="col-10">
+						<div class="item_content">
+							<p>
+								<b th:utext="${s.name}"> </b>
+							</p>
+							<p>
+								<span th:utext="${s.learn_day}=='Chủ nhật' ? '' : 'Thứ: '"></span>
+								<span th:utext="${s.learn_day}"> </span>
+							</p>
+							<p>
+								Mã môn học: <span th:utext="${s.code}"></span>
+							</p>
+							<p>
+								Nhóm môn học: <span th:utext="${s.groupp}"></span>
+							</p>
+							<p>
+								Giảng viên: <span th:utext="${s.teacher}"></span>
+							</p>
+							<p>
+								Phòng học: <span th:utext="${s.room}"></span>
+							</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+	<script src="../js/schedule.js"></script>
+</body>
+
+</html>
